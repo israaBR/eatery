@@ -1,0 +1,28 @@
+footer {
+  padding: 0% 5%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+footer h4 {
+  font-size: 40px;
+}
+footer input,
+footer button {
+  height: 50px;
+  font-size: 18px;
+}
+footer .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 22px;
+}
+footer img {
+  /* position: fixed; */
+  /* bottom: 0; */
+  width: 125%;
+  height: auto;
+}
+footer span {
+  color: black;
+  font-size: 55px;
+}

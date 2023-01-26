@@ -1,0 +1,40 @@
+header {
+  display: flex;
+}
+header #logo {
+  font-size: 32px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+header a {
+  font-size: 20px;
+  text-decoration: none;
+}
+header i {
+  font-size: 25px;
+}
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  position: relative;
+  left: -8px;
+  top: -10px;
+  opacity: 0.9;
+}
+.label-warning[href],
+.badge-warning[href] {
+  background-color: #c67605;
+}
+#lblCartCount {
+  font-size: 15px;
+  background: #ff0000;
+  color: #fff;
+  padding: 3px 5px;
+  vertical-align: top;
+  margin-left: -10px;
+}
+.navbar-nav {
+  flex-direction: row;
+}
