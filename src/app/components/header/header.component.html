@@ -1,12 +1,36 @@
 <header class="container-fluid bg-black px-5">
   <div class="col-3">
-    <a class="text-warning" id="logo">Eatery</a>
+    <a class="text-warning" id="logo" routerLink="home">Eatery</a>
   </div>
   <div class="col-6 my-3 text-center">
-    <a class="text-secondary mx-2" href="#">Home</a>
-    <a class="text-secondary mx-2" href="#">Menu</a>
-    <a class="text-secondary mx-2" href="#">Groups</a>
-    <a class="text-secondary mx-2" href="#">Reservations</a>
+    <a
+      class="text-secondary mx-2"
+      href="#"
+      routerLink="home"
+      routerLinkActive="text-light"
+      >Home</a
+    >
+    <a
+      class="text-secondary mx-2"
+      href="#"
+      routerLink="menu"
+      routerLinkActive="text-light"
+      >Menu</a
+    >
+    <a
+      class="text-secondary mx-2"
+      href="#"
+      routerLink="groups"
+      routerLinkActive="text-light"
+      >Groups</a
+    >
+    <a
+      class="text-secondary mx-2"
+      href="#"
+      routerLink="reservations"
+      routerLinkActive="text-light"
+      >Reservations</a
+    >
   </div>
   <div class="col-3 my-3">
     <ul class="navbar-nav">
@@ -14,6 +38,8 @@
         <a
           class="nav-link dropdown-toggle text-light"
           href="#"
+          routerLink=""
+          routerLinkActive="text-light"
           role="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
@@ -21,12 +47,12 @@
           <i class="fa-solid fa-user mx-2"></i> Account
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">SignUp</a></li>
-          <li><a class="dropdown-item" href="#">Login</a></li>
+          <li><a class="dropdown-item" href="#" routerLink="">SignUp</a></li>
+          <li><a class="dropdown-item" href="#" routerLink="">Login</a></li>
         </ul>
       </li>
       <li class="nav-item mx-3">
-        <a class="nav-link text-warning" href="#"
+        <a class="nav-link text-warning" href="#" routerLink="cart"
           ><i class="fa-solid fa-cart-shopping mx-2"> </i>
           <span class="badge badge-warning" id="lblCartCount"> 5 </span> Cart</a
         >
