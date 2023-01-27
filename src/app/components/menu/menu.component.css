@@ -1,4 +1,30 @@
-.row {
+.img-header {
+  background-image: url("src\assets\images\background.PNG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+.img-header p {
+  margin-top: 5%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: 40px;
+  background-color: black;
+  border-radius: 10px;
+  height: fit-content;
+}
+.categories-list {
+  margin-inline: 15%;
+  padding-bottom: 1%;
+  border-bottom: 1px solid black;
+}
+.categories-list a {
+  color: darkgoldenrod;
+  font-weight: 400;
+  font-size: 15px;
+  text-decoration: none;
+}
+.menu-list {
   margin-inline: 15%;
 }
 h4 {
