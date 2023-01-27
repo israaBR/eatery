@@ -12,6 +12,9 @@ import { ReservationsComponent } from './components/reservations/reservations.co
 import { CartComponent } from './components/cart/cart.component';
 import { MenuItemComponent } from './components/menu-item/menu-item.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { AddMenuItemComponent } from './components/add-menu-item/add-menu-item.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { SignUpFormComponent } from './components/sign-up-form/sign-up-form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,6 +38,9 @@ const routes: Routes = [
     CartComponent,
     MenuItemComponent,
     NotFoundComponent,
+    AddMenuItemComponent,
+    LoginFormComponent,
+    SignUpFormComponent,
   ],
   imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [],
