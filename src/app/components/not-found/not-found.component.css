@@ -1,0 +1,12 @@
+.container-fluid {
+  padding-inline: 35%;
+  margin-block: 10%;
+}
+h2 {
+  color: darkgoldenrod;
+  font-weight: 900;
+  font-size: 100px;
+}
+h4 {
+  color: darkgoldenrod;
+}
