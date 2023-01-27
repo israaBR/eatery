@@ -24,6 +24,10 @@
   font-size: 15px;
   text-decoration: none;
 }
+.categories-list a:hover {
+  color: rgb(200, 148, 17);
+  text-decoration: underline;
+}
 .menu-list {
   margin-inline: 15%;
 }

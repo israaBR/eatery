@@ -17,3 +17,18 @@
   height: auto;
   border-radius: 5px;
 }
+button {
+  width: fit-content;
+}
+.state-low {
+  color: rgb(133, 4, 4);
+  background-color: rgb(255, 217, 217);
+  font-size: 15px;
+  font-weight: 400;
+}
+.state-not-available {
+  color: rgb(112, 110, 110);
+  background-color: rgb(225, 225, 225);
+  font-size: 15px;
+  font-weight: 400;
+}
