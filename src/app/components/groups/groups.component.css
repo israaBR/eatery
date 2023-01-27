@@ -1,0 +1,11 @@
+h2 {
+  font-size: 50px;
+  font-weight: 700;
+}
+.container-fluid {
+  padding-inline: 15%;
+}
+button {
+  width: fit-content;
+  font-size: 18px;
+}
