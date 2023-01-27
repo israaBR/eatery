@@ -23,6 +23,9 @@ const routes: Routes = [
   { path: 'groups', component: GroupsComponent },
   { path: 'reservations', component: ReservationsComponent },
   { path: 'cart', component: CartComponent },
+  { path: 'login', component: LoginFormComponent },
+  { path: 'signup', component: SignUpFormComponent },
+  { path: 'additem', component: AddMenuItemComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
