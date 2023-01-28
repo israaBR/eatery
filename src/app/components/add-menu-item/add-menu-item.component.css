@@ -1,0 +1,36 @@
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+h3 {
+  color: darkgoldenrod;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 40px;
+}
+.form-row {
+  margin-bottom: 3%;
+  margin-inline: 1%;
+}
+input {
+  width: 100%;
+  height: 50px;
+  padding: 1%;
+  border: 0;
+}
+input[type="text"] {
+  border-bottom: 1px solid black;
+}
+
+.error-msg {
+  display: none;
+  color: rgb(133, 4, 4);
+  background-color: rgb(255, 217, 217);
+  font-size: 15px;
+  font-weight: 400;
+}
+button {
+  font-size: 18px;
+  color: darkgoldenrod;
+  width: fit-content;
+}
