@@ -1,0 +1,23 @@
+.container-fluid {
+  padding-inline: 10%;
+}
+h2 {
+  color: darkgoldenrod;
+  font-size: 48px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+h4 {
+  font-size: 18px;
+}
+
+.order {
+  color: darkgoldenrod;
+  font-size: 18px;
+}
+i {
+  color: darkgoldenrod;
+}
+a {
+  text-decoration: none;
+  color: darkgoldenrod;
+}

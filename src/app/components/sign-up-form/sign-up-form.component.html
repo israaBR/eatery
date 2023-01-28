@@ -1,1 +1,47 @@
-<p>sign-up-form works!</p>
+<div class="container-fluid">
+  <div class="row py-5">
+    <div class="col-6 p-2">
+      <img
+        src="https://static.wixstatic.com/media/a560a5_16f9a06f75494d109e247cf5203cbde9~mv2.jpg/v1/fill/w_930,h_698,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/building.jpg"
+      />
+    </div>
+    <div class="col-6 px-5 py-5">
+      <h3 class="mb-3 mx-3">Sign Up</h3>
+      <form class="mx-3" action="">
+        <div class="row">
+          <div class="col-5 form-col">
+            <input type="name" placeholder="First Name" />
+            <p class="error-msg">First name is required</p>
+            <p class="error-msg">First name can't have numbers</p>
+          </div>
+          <div class="col-5 form-col">
+            <input type="name" placeholder="Last Name" />
+            <p class="error-msg">Last name is required</p>
+            <p class="error-msg">Last name can't have numbers</p>
+          </div>
+          <div class="col-5 form-col">
+            <input type="email" placeholder="Email" />
+            <p class="error-msg">Email is required</p>
+            <p class="error-msg">Please Enter a valid email address</p>
+          </div>
+          <div class="col-5 form-col">
+            <input type="tel" placeholder="Phone Number" />
+            <p class="error-msg">Phone number is required</p>
+            <p class="error-msg">Please enter a valid phone number</p>
+          </div>
+          <div class="col-10 form-col">
+            <input type="password" placeholder="Password" />
+            <p class="error-msg">Password is required</p>
+            <p class="error-msg">Password must be at least 8 characters</p>
+          </div>
+          <button
+            class="btn btn-outline-dark my-3 d-block py-2 px-4 mx-auto"
+            type="submit"
+          >
+            Sign Up
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

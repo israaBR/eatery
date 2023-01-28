@@ -1,1 +1,52 @@
-<p>cart works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8">
+      <h2 class="row my-3">Your Cart</h2>
+      <div class="row">
+        <h4>Your Order (<span>5 ITEMS</span>)</h4>
+        <app-cart-item class="col-10 text-center"></app-cart-item>
+        <app-cart-item class="col-10 text-center"></app-cart-item>
+        <app-cart-item class="col-10 text-center"></app-cart-item>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="row m-1 my-5">
+        <h5 class="col-8 mb-4">HOW TO GET IT</h5>
+        <a class="col-3 mb-4" href="#">Edit</a>
+        <p class="m-1">
+          <i class="fa-solid fa-location-dot"></i> Pickup: 530 Braynt Street
+        </p>
+        <p class="m-1"><i class="fa-regular fa-clock"></i> Today at 12:00 PM</p>
+      </div>
+      <hr />
+      <div class="row mx-1 mb-5 mt-3">
+        <h5 class="row mb-4">ADD A TIP</h5>
+        <div class="row m-1">
+          <button class="text-center col-2 m-1 btn btn-outline-dark">5%</button>
+          <button class="text-center col-2 m-1 btn btn-outline-dark">
+            10%
+          </button>
+          <button class="text-center col-2 m-1 btn btn-outline-dark">
+            15%
+          </button>
+          <button class="text-center col-2 m-1 btn btn-outline-dark">
+            20%
+          </button>
+          <button class="text-center col-2 m-1 btn btn-outline-dark">
+            Other
+          </button>
+        </div>
+      </div>
+      <hr />
+      <div class="row mx-1 my-3">
+        <p class="fw-bold col-8">Subtotal</p>
+        <p class="fw-bold col-4">$23.00</p>
+        <p class="col-8">Tip(<span>20</span>%)</p>
+        <p class="col-4">$4.30</p>
+        <button class="col-10 text-center btn btn-outline-dark m-3 order">
+          Make Order ($<span>27.30</span>)
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

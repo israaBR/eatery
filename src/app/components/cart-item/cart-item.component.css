@@ -1,0 +1,25 @@
+.item-name {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: darkgoldenrod;
+}
+
+.item-price {
+  font-size: 16px;
+  font-weight: 600;
+}
+.item-img {
+  width: 75%;
+  height: auto;
+  border-radius: 5px;
+}
+.item-count {
+  padding-top: 2%;
+  font-size: 16px;
+  font-weight: 600;
+}
+button {
+  width: fit-content;
+  font-size: 12px;
+}

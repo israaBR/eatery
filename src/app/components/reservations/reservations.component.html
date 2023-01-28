@@ -1,1 +1,76 @@
-<p>reservations works!</p>
+<div class="container-fluid">
+  <div class="row py-5">
+    <div class="col-6 p-2">
+      <img
+        src="https://static.wixstatic.com/media/a560a5_16f9a06f75494d109e247cf5203cbde9~mv2.jpg/v1/fill/w_930,h_698,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/building.jpg"
+      />
+    </div>
+    <div class="col-6 px-5">
+      <h3 class="mb-3 mx-3">We're already excited to welcome you at Eatery</h3>
+      <form class="mx-3" action="">
+        <div class="row">
+          <div class="col-5 form-col">
+            <input type="name" placeholder="First Name" />
+            <p class="error-msg">First name is required</p>
+            <p class="error-msg">First name can't have numbers</p>
+          </div>
+          <div class="col-5 form-col">
+            <input type="name" placeholder="Last Name" />
+            <p class="error-msg">Last name is required</p>
+            <p class="error-msg">Last name can't have numbers</p>
+          </div>
+          <div class="col-5 form-col">
+            <input type="email" placeholder="Email" />
+            <p class="error-msg">Email is required</p>
+            <p class="error-msg">Please Enter a valid email address</p>
+          </div>
+          <div class="col-5 form-col">
+            <input type="tel" placeholder="Phone Number" />
+            <p class="error-msg">Phone number is required</p>
+            <p class="error-msg">Please enter a valid phone number</p>
+          </div>
+          <div class="col-5 form-col">
+            <input type="date" />
+            <p class="error-msg">Date is required</p>
+            <p class="error-msg">Date can't be in the past</p>
+          </div>
+          <div class="col-5 form-col">
+            <input type="time" />
+            <p class="error-msg">Time is required</p>
+          </div>
+          <div class="col-5 form-col">
+            <label class="mt-3 mb-1"
+              >Select Your Seating Type
+              <select class="mt-1 mb-3">
+                <option value="in">Indoor</option>
+                <option value="out">Outdoor</option>
+              </select>
+            </label>
+          </div>
+          <div class="col-5 form-col">
+            <label class="mt-3 mb-1"
+              >Select Your Dinning Space
+              <select class="mt-1 mb-3">
+                <option value="1">1 person</option>
+                <option value="2">2 people</option>
+                <option value="3">3 people</option>
+                <option value="4">4 people</option>
+                <option value="5">5 people</option>
+              </select>
+            </label>
+          </div>
+          <p class="error-msg">
+            Sorry this date or time are not available, try a different day or
+            hour
+          </p>
+          <button
+            class="btn btn-outline-dark my-3 d-block py-2 px-4 mx-auto"
+            type="submit"
+          >
+            Confirm Reservation
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
