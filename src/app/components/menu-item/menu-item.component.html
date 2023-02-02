@@ -1,26 +1,33 @@
 <div class="container my-3">
   <div class="row">
     <div class="col-8">
-      <div class="row">
-        <p class="item-name">Pkhali</p>
+      <div class="row h-25">
+        <p class="item-name">{{ item.title }}</p>
       </div>
-      <div class="row">
+      <div class="row h-50">
         <p class="item-description">
-          Hand-chopped baby spinach and beets pkhali with walnuts and herbs.
-          Served with eggplant rolls and grilled rosemary bread with olives.
+          {{ item.description.slice(0, 87)
+          }}<span *ngIf="item.description.length > 87">..</span>
         </p>
       </div>
-      <div class="row">
-        <p class="col-6 item-price">$20.00</p>
-        <button class="col-6 btn btn-outline-dark">Add to Order</button>
+      <div class="row h-25">
+        <p class="col-6 item-price">${{ item.price }}</p>
+        <!-- <button class="col-6 btn btn-outline-dark">Add to Order</button> -->
       </div>
     </div>
     <div class="col-4 mt-5">
-      <img
-        class="item-img"
-        src="https://menu.bevri.com/uploads/1/2/9/4/129418926/s237899252658155039_p3_i7_w1280.jpeg?dpr=1.25"
-      />
+      <img class="item-img" [src]="item.image" />
     </div>
-    <p class="text-center my-2 state-not-available">not available</p>
+    <div ngSwitch="{{ item.state }}">
+      <p
+        class="text-center my-2 state-not-available"
+        *ngSwitchCase="'not available'"
+      >
+        not available
+      </p>
+      <p class="text-center my-2 state-low" *ngSwitchCase="'low stock'">
+        low stock
+      </p>
+    </div>
   </div>
 </div>

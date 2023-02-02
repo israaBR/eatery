@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -16,6 +18,11 @@ import { AddMenuItemComponent } from './components/add-menu-item/add-menu-item.c
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { SignUpFormComponent } from './components/sign-up-form/sign-up-form.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
+
+import { MenuService } from './services/menu.service';
+import { CustomerService } from './services/customer.service';
+import { AdminService } from './services/admin.service';
+import { CartService } from './services/cart.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -47,8 +54,14 @@ const routes: Routes = [
     SignUpFormComponent,
     CartItemComponent,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routes)],
-  providers: [],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
+  providers: [MenuService, CustomerService, AdminService, CartService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

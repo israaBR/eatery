@@ -4,22 +4,60 @@
   </p>
 </div>
 <div class="categories-list row my-4">
-  <a href="#" class="col-2 text-center">Small Plates</a>
-  <a href="#" class="col-2 text-center">Soups and Salads</a>
-  <a href="#" class="col-2 text-center">Essentials</a>
-  <a href="#" class="col-2 text-center">Meat and Fish</a>
-  <a href="#" class="col-2 text-center">Soft Drinks</a>
-  <a href="#" class="col-2 text-center">Desserts</a>
+  <a href="/menu/#small-plates" class="col-2 text-center">Small Plates</a>
+  <a href="/menu/#soups-and-salads" class="col-2 text-center"
+    >Soups and Salads</a
+  >
+  <a href="/menu/#essentials" class="col-2 text-center">Essentials</a>
+  <a href="/menu/#meat-and-fish" class="col-2 text-center">Meat and Fish</a>
+  <a href="/menu/#soft-drinks" class="col-2 text-center">Soft Drinks</a>
+  <a href="/menu/#desserts" class="col-2 text-center">Desserts</a>
 </div>
-<div class="menu-list row my-3">
+<div id="small-plates" class="menu-list row my-5">
   <h4>Small Plates</h4>
-  <app-menu-item class="col-6"></app-menu-item>
-  <app-menu-item class="col-6"></app-menu-item>
-  <app-menu-item class="col-6"></app-menu-item>
-  <app-menu-item class="col-6"></app-menu-item>
+  <app-menu-item
+    *ngFor="let item of small_plates"
+    [item]="item"
+    class="col-6"
+  ></app-menu-item>
 </div>
-<div class="menu-list row my-3">
-  <h4>Small Plates</h4>
-  <app-menu-item class="col-6"></app-menu-item>
-  <app-menu-item class="col-6"></app-menu-item>
+<div id="soups-and-salads" class="menu-list row my-5">
+  <h4>Soups and Salads</h4>
+  <app-menu-item
+    *ngFor="let item of soups_and_salads"
+    [item]="item"
+    class="col-6"
+  ></app-menu-item>
+</div>
+<div id="essentials" class="menu-list row my-5">
+  <h4>Essentials</h4>
+  <app-menu-item
+    *ngFor="let item of essentials"
+    [item]="item"
+    class="col-6"
+  ></app-menu-item>
+</div>
+<div id="meat-and-fish" class="menu-list row my-5">
+  <h4>Meat and Fish</h4>
+  <app-menu-item
+    *ngFor="let item of meat_and_fish"
+    [item]="item"
+    class="col-6"
+  ></app-menu-item>
+</div>
+<div id="soft-drinks" class="menu-list row my-5">
+  <h4>Soft Drinks</h4>
+  <app-menu-item
+    *ngFor="let item of soft_drinks"
+    [item]="item"
+    class="col-6"
+  ></app-menu-item>
+</div>
+<div id="desserts" class="menu-list row my-5">
+  <h4>Desserts</h4>
+  <app-menu-item
+    *ngFor="let item of desserts"
+    [item]="item"
+    class="col-6"
+  ></app-menu-item>
 </div>
