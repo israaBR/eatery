@@ -1,28 +1,54 @@
 <div class="container-fluid">
   <div class="col-6 px-5 py-5">
     <h3 class="mb-3 mx-3">Add Menu Item</h3>
-    <form class="mx-3" action="">
+    <form class="mx-3" [formGroup]="itemForm">
       <div class="row form-row">
-        <input type="text" placeholder="Item Name" />
-        <p class="error-msg">Item name is required</p>
-        <p class="error-msg">Item name can't have numbers</p>
+        <input type="text" placeholder="Item Name" formControlName="name" />
+        <ng-container *ngIf="getName.touched">
+          <p class="error-msg" *ngIf="getName.hasError('required')">
+            Item name is required
+          </p>
+          <p class="error-msg" *ngIf="getName.hasError('pattern')">
+            Item name can't have numbers
+          </p>
+        </ng-container>
       </div>
       <div class="row form-row">
-        <input type="text" placeholder="Item Description" />
-        <p class="error-msg">Item description is required</p>
-        <p class="error-msg">Item description must be at least 50 characters</p>
+        <input
+          type="text"
+          placeholder="Item Description"
+          formControlName="description"
+        />
+        <ng-container *ngIf="getDescription.touched">
+          <p class="error-msg" *ngIf="getDescription.hasError('required')">
+            Item description is required
+          </p>
+          <p class="error-msg" *ngIf="getDescription.hasError('minLength')">
+            Item description must be at least 50 characters
+          </p>
+        </ng-container>
       </div>
       <div class="row form-row">
-        <input type="text" placeholder="Item Price" />
-        <p class="error-msg">Item price is required</p>
-        <p class="error-msg">Item price Can't have letters</p>
+        <input type="text" placeholder="Item Price" formControlName="price" />
+        <ng-container *ngIf="getPrice.touched">
+          <p class="error-msg" *ngIf="getPrice.hasError('required')">
+            Item price is required
+          </p>
+          <p class="error-msg" *ngIf="getPrice.hasError('pattern')">
+            Item price Can't have letters
+          </p>
+        </ng-container>
       </div>
       <div class="row form-row">
         <label class="d-inline-block"
           >Item image
-          <input type="file" />
+          <input type="file" formControlName="image" />
         </label>
-        <p class="error-msg">Item image is required</p>
+        <ng-container *ngIf="getImage.touched">
+          <p class="error-msg" *ngIf="getImage.hasError('required')">
+            Item image is required
+          </p>
+        </ng-container>
       </div>
       <button
         class="btn btn-outline-dark my-3 d-block py-2 px-4 mx-auto"

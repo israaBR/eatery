@@ -7,21 +7,39 @@
     </div>
     <div class="col-6 px-5 py-5">
       <h3 class="mb-3 mx-3">Welcome Back!</h3>
-      <form class="mx-3" action="">
+      <form [formGroup]="userForm" class="mx-3">
         <div class="row">
           <div class="col-10 form-col">
-            <input type="email" placeholder="Email" />
-            <p class="error-msg">Email is required</p>
-            <p class="error-msg">Please Enter a valid email address</p>
+            <input type="email" placeholder="Email" formControlName="email" />
+            <ng-container *ngIf="getEmail.touched">
+              <p class="error-msg" *ngIf="getEmail.hasError('required')">
+                Email is required
+              </p>
+              <p class="error-msg" *ngIf="getEmail.hasError('email')">
+                Please Enter a valid email address
+              </p>
+            </ng-container>
           </div>
           <div class="col-10 form-col">
-            <input type="password" placeholder="Password" />
-            <p class="error-msg">Password is required</p>
+            <input
+              type="password"
+              placeholder="Password"
+              formControlName="password"
+            />
+            <ng-container *ngIf="getPassword.touched">
+              <p class="error-msg" *ngIf="getPassword.hasError('required')">
+                Password is required
+              </p>
+            </ng-container>
           </div>
           <div class="col-10">
+            <ng-container *ngIf="formSubmited">
+              <p *ngIf="!userFound" class="error-msg">user not found</p>
+            </ng-container>
             <button
               class="btn btn-outline-dark my-3 d-block py-2 px-4 mx-auto"
               type="submit"
+              (click)="login()"
             >
               Login
             </button>

@@ -14,6 +14,12 @@ export class CustomerService {
   getCustomerById(customerId: any) {
     return this.client.get(`${this.baseUrl}/${customerId}`);
   }
+  getCustomerByEmail(customerEmail: any) {
+    return this.client.get(`${this.baseUrl}/email/${customerEmail}`);
+  }
+  loginCustomer(customer: any) {
+    return this.client.post(`${this.baseUrl}/login`, customer);
+  }
   addCustomer(customer: any) {
     return this.client.post(this.baseUrl, customer);
   }

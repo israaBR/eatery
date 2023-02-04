@@ -16,4 +16,8 @@ export class MenuItemComponent {
     category: '',
   };
   constructor() {}
+
+  addToCart() {
+    console.log('add to cart');
+  }
 }

@@ -5,15 +5,28 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class AdminService {
-  baseUrl = 'http://localhost:5000/customer';
-  private adminId = '63dbce59500398617662262b';
+  baseUrl = 'http://localhost:5000/admin';
   constructor(private client: HttpClient) {}
 
-  // getAllAdmins() {}
-  getAdminById() {
-    return this.client.get(`${this.baseUrl}/customer/${this.adminId}`);
+  getAllAdmins() {
+    return this.client.get(this.baseUrl);
   }
-  // addAdmin() {}
-  // editAdmin() {}
-  // deleteAdmin() {}
+  getAdminById(adminId: any) {
+    return this.client.get(`${this.baseUrl}/${adminId}`);
+  }
+  getAdminByEmail(adminEmail: any) {
+    return this.client.get(`${this.baseUrl}/email/${adminEmail}`);
+  }
+  loginAdmin(admin: any) {
+    return this.client.post(`${this.baseUrl}/login`, admin);
+  }
+  addAdmin(admin: any) {
+    return this.client.post(this.baseUrl, admin);
+  }
+  editAdmin(adminId: any, admin: any) {
+    return this.client.put(`${this.baseUrl}/${adminId}`, admin);
+  }
+  deleteAdmin(adminId: any) {
+    return this.client.delete(`${this.baseUrl}/${adminId}`);
+  }
 }

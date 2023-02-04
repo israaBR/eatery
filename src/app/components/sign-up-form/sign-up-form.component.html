@@ -7,32 +7,78 @@
     </div>
     <div class="col-6 px-5 py-5">
       <h3 class="mb-3 mx-3">Sign Up</h3>
-      <form class="mx-3" action="">
+      <form class="mx-3" [formGroup]="customerForm">
         <div class="row">
           <div class="col-5 form-col">
-            <input type="name" placeholder="First Name" />
-            <p class="error-msg">First name is required</p>
-            <p class="error-msg">First name can't have numbers</p>
+            <input
+              type="name"
+              placeholder="First Name"
+              formControlName="firstName"
+            />
+            <ng-container *ngIf="getFName.touched">
+              <p class="error-msg" *ngIf="getFName.hasError('required')">
+                First name is required
+              </p>
+              <p class="error-msg" *ngIf="getFName.hasError('pattern')">
+                First name can't have numbers
+              </p>
+            </ng-container>
           </div>
           <div class="col-5 form-col">
-            <input type="name" placeholder="Last Name" />
-            <p class="error-msg">Last name is required</p>
-            <p class="error-msg">Last name can't have numbers</p>
+            <input
+              type="name"
+              placeholder="Last Name"
+              formControlName="lastName"
+            />
+            <ng-container *ngIf="getLName.touched">
+              <p class="error-msg" *ngIf="getLName.hasError('required')">
+                Last name is required
+              </p>
+              <p class="error-msg" *ngIf="getLName.hasError('pattern')">
+                Last name can't have numbers
+              </p>
+            </ng-container>
           </div>
           <div class="col-5 form-col">
-            <input type="email" placeholder="Email" />
-            <p class="error-msg">Email is required</p>
-            <p class="error-msg">Please Enter a valid email address</p>
+            <input type="email" placeholder="Email" formControlName="email" />
+            <ng-container *ngIf="getEmail.touched">
+              <p class="error-msg" *ngIf="getEmail.hasError('required')">
+                Email is required
+              </p>
+              <p class="error-msg" *ngIf="getEmail.hasError('email')">
+                Please Enter a valid email address
+              </p>
+            </ng-container>
           </div>
           <div class="col-5 form-col">
-            <input type="tel" placeholder="Phone Number" />
-            <p class="error-msg">Phone number is required</p>
-            <p class="error-msg">Please enter a valid phone number</p>
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              formControlName="phoneNumber"
+            />
+            <ng-container *ngIf="getPhoneNumber.touched">
+              <p class="error-msg" *ngIf="getPhoneNumber.hasError('required')">
+                Phone number is required
+              </p>
+              <p class="error-msg" *ngIf="getPhoneNumber.hasError('pattern')">
+                Please enter a valid phone number
+              </p>
+            </ng-container>
           </div>
           <div class="col-10 form-col">
-            <input type="password" placeholder="Password" />
-            <p class="error-msg">Password is required</p>
-            <p class="error-msg">Password must be at least 8 characters</p>
+            <input
+              type="password"
+              placeholder="Password"
+              formControlName="password"
+            />
+            <ng-container *ngIf="getPassword.touched">
+              <p class="error-msg" *ngIf="getPassword.hasError('required')">
+                Password is required
+              </p>
+              <p class="error-msg" *ngIf="getPassword.hasError('pattern')">
+                Password must be at least 8 characters
+              </p>
+            </ng-container>
           </div>
           <button
             class="btn btn-outline-dark my-3 d-block py-2 px-4 mx-auto"

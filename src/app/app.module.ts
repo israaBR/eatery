@@ -33,7 +33,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'login', component: LoginFormComponent },
   { path: 'signup', component: SignUpFormComponent },
-  { path: 'additem', component: AddMenuItemComponent },
+  { path: 'add-menu-item', component: AddMenuItemComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
