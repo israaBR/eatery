@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ICart } from 'src/app/models/cart';
 import { IMenuItem } from 'src/app/models/menuItem';
 
 @Component({
@@ -8,6 +9,7 @@ import { IMenuItem } from 'src/app/models/menuItem';
 })
 export class MenuItemComponent {
   @Input() item: IMenuItem = {
+    _id: '',
     title: '',
     description: '',
     image: '',
@@ -15,9 +17,10 @@ export class MenuItemComponent {
     state: '',
     category: '',
   };
+
   constructor() {}
 
   addToCart() {
-    console.log('add to cart');
+    console.log('add to cart', this.item._id);
   }
 }

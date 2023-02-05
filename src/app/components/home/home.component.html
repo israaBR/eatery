@@ -22,9 +22,11 @@
         voluptate impedit assumenda, totam illo qui similique voluptates
         suscipit commodi et!
       </p>
-      <button class="btn btn-outline-warning text-center px-4 py-2 mt-4">
-        Menu
-      </button>
+      <a routerLink="/menu">
+        <button class="btn btn-outline-warning text-center px-4 py-2 mt-4">
+          Menu
+        </button>
+      </a>
     </div>
     <div class="col-2 ms-2">
       <img
@@ -37,7 +39,7 @@
     <h4 class="fs-2 text-center mb-2">Discover Georgian Cuisine</h4>
     <div class="row py-5">
       <div class="col-3 text-center">
-        <a href="#" class="text-black">
+        <a href="#" class="text-black" routerLink="/menu">
           <img
             class=""
             src="https://static.wixstatic.com/media/a560a5_433372453339404ebb21fd73cb6083ad~mv2_d_2400_3600_s_4_2.jpg/v1/fill/w_396,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/bevri_website_gift_card2.jpg"
@@ -64,7 +66,9 @@
         </a>
       </div>
     </div>
-    <button class="btn btn-dark py-2 px-4 mt-4">Make a Reservation</button>
+    <a routerLink="/reservations" class="text-center">
+      <button class="btn btn-dark py-2 px-4 mt-4">Make a Reservation</button>
+    </a>
   </div>
   <div class="row" id="bg-img"></div>
   <div class="row bg-white py-5" id="map">

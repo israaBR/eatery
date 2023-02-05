@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'src/app/models/menuItem';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ICart } from 'src/app/models/cart';
+import { CartService } from 'src/app/services/cart.service';
 import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
@@ -15,12 +16,22 @@ export class MenuComponent implements OnInit {
   soft_drinks: any = [];
   desserts: any = [];
 
-  constructor(private menuService: MenuService) {}
+  constructor(
+    private menuService: MenuService,
+    private cartService: CartService
+  ) {}
+  @Input() cart: any = {
+    _id: '',
+    items: [],
+  };
+  @Output() cartCountChange = new EventEmitter<number>();
 
   ngOnInit(): void {
     this.getMenu();
+    this.cartService
+      .getCartById('63dbce595003986176622629')
+      .subscribe((response) => (this.cart = response));
   }
-
   getMenu() {
     this.menuService
       .getMenuItemsByCategory('small-plates')
@@ -52,5 +63,12 @@ export class MenuComponent implements OnInit {
       .subscribe((response) => {
         this.desserts = response;
       });
+  }
+
+  addToCart(itemId: string) {
+    this.cart.items.push(itemId);
+    this.cartService
+      .editCart(this.cart._id, this.cart)
+      .subscribe((reponse) => (this.cart = reponse));
   }
 }

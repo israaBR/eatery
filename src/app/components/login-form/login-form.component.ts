@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from 'src/app/models/user';
+import { Customer } from 'src/app/models/user';
 import { AdminService } from 'src/app/services/admin.service';
 import { CustomerService } from 'src/app/services/customer.service';
 import { HomeComponent } from '../home/home.component';

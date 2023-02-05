@@ -12,16 +12,24 @@ h3 {
   margin-bottom: 3%;
   margin-inline: 1%;
 }
-input {
+input,
+select {
   width: 100%;
   height: 50px;
   padding: 1%;
   border: 0;
 }
-input[type="text"] {
+input[type="text"],
+select {
   border-bottom: 1px solid black;
 }
-
+label {
+  width: 100%;
+  color: darkgoldenrod;
+}
+select {
+  margin-inline: 0%;
+}
 .error-msg {
   color: rgb(133, 4, 4);
   background-color: rgb(255, 217, 217);

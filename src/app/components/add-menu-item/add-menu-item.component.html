@@ -3,7 +3,15 @@
     <h3 class="mb-3 mx-3">Add Menu Item</h3>
     <form class="mx-3" [formGroup]="itemForm">
       <div class="row form-row">
-        <input type="text" placeholder="Item Name" formControlName="name" />
+        <input type="text" placeholder="Item Image" formControlName="image" />
+        <ng-container *ngIf="getImage.touched">
+          <p class="error-msg" *ngIf="getImage.hasError('required')">
+            Item image is required
+          </p>
+        </ng-container>
+      </div>
+      <div class="row form-row">
+        <input type="text" placeholder="Item Name" formControlName="title" />
         <ng-container *ngIf="getName.touched">
           <p class="error-msg" *ngIf="getName.hasError('required')">
             Item name is required
@@ -41,6 +49,39 @@
       </div>
       <div class="row form-row">
         <label class="d-inline-block"
+          >Category
+          <select class="mt-1 mb-3" formControlName="category">
+            <option value="small-plates">Small Plates</option>
+            <option value="soups-and-salads">Soups and Salads</option>
+            <option value="essentials">Essentials</option>
+            <option value="meat-and-fish">Meat and Fish</option>
+            <option value="soft-drinks">Soft Drinks</option>
+            <option value="desserts">Desserts</option>
+          </select>
+        </label>
+        <ng-container *ngIf="getCategory.touched">
+          <p class="error-msg" *ngIf="getCategory.hasError('required')">
+            Item category is required
+          </p>
+        </ng-container>
+      </div>
+      <div class="row form-row">
+        <label class="d-inline-block"
+          >State
+          <select class="mt-1 mb-3" formControlName="state">
+            <option value="available">Available</option>
+            <option value="not available">Not Available</option>
+            <option value="low stock">Low Stock</option>
+          </select>
+        </label>
+        <ng-container *ngIf="getState.touched">
+          <p class="error-msg" *ngIf="getState.hasError('required')">
+            Item state is required
+          </p>
+        </ng-container>
+      </div>
+      <!-- <div class="row form-row">
+        <label class="d-inline-block"
           >Item image
           <input type="file" formControlName="image" />
         </label>
@@ -49,14 +90,14 @@
             Item image is required
           </p>
         </ng-container>
-      </div>
+      </div> -->
       <button
         class="btn btn-outline-dark my-3 d-block py-2 px-4 mx-auto"
         type="submit"
+        (click)="addMenuItem()"
       >
         Add Item
       </button>
     </form>
   </div>
-  <!-- </div> -->
 </div>

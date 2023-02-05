@@ -18,12 +18,12 @@ export class MenuService {
     return this.client.get(`${this.baseUrl}/category/${category}`);
   }
   addMenuItem(item: any) {
-    return this.client.get(this.baseUrl, item);
+    return this.client.post(this.baseUrl, item);
   }
   editMenuItem(itemId: any, item: any) {
-    return this.client.get(`${this.baseUrl}/${itemId}`, item);
+    return this.client.put(`${this.baseUrl}/${itemId}`, item);
   }
   deleteMenuItem(itemId: any) {
-    return this.client.get(`${this.baseUrl}/${itemId}`);
+    return this.client.delete(`${this.baseUrl}/${itemId}`);
   }
 }

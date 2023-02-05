@@ -16,6 +16,7 @@
 <div id="small-plates" class="menu-list row my-5">
   <h4>Small Plates</h4>
   <app-menu-item
+    (click)="addToCart(item._id)"
     *ngFor="let item of small_plates"
     [item]="item"
     class="col-6"
@@ -24,6 +25,7 @@
 <div id="soups-and-salads" class="menu-list row my-5">
   <h4>Soups and Salads</h4>
   <app-menu-item
+    (click)="addToCart(item._id)"
     *ngFor="let item of soups_and_salads"
     [item]="item"
     class="col-6"
@@ -32,6 +34,7 @@
 <div id="essentials" class="menu-list row my-5">
   <h4>Essentials</h4>
   <app-menu-item
+    (click)="addToCart(item._id)"
     *ngFor="let item of essentials"
     [item]="item"
     class="col-6"
@@ -40,6 +43,7 @@
 <div id="meat-and-fish" class="menu-list row my-5">
   <h4>Meat and Fish</h4>
   <app-menu-item
+    (click)="addToCart(item._id)"
     *ngFor="let item of meat_and_fish"
     [item]="item"
     class="col-6"
@@ -48,6 +52,7 @@
 <div id="soft-drinks" class="menu-list row my-5">
   <h4>Soft Drinks</h4>
   <app-menu-item
+    (click)="addToCart(item._id)"
     *ngFor="let item of soft_drinks"
     [item]="item"
     class="col-6"
@@ -56,6 +61,7 @@
 <div id="desserts" class="menu-list row my-5">
   <h4>Desserts</h4>
   <app-menu-item
+    (click)="addToCart(item._id)"
     *ngFor="let item of desserts"
     [item]="item"
     class="col-6"

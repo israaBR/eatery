@@ -1,5 +1,6 @@
-<div class="container my-3">
-  <div class="row" title="add to cart" (click)="addToCart()">
+<!-- data-bs-toggle="modal" data-bs-target="#exampleModal" -->
+<div class="container my-3" (click)="addToCart()">
+  <div class="row">
     <div class="col-8">
       <div class="row h-25">
         <p class="item-name">{{ item.title }}</p>
@@ -12,7 +13,6 @@
       </div>
       <div class="row h-25">
         <p class="col-6 item-price">${{ item.price }}</p>
-        <!-- <button class="col-6 btn btn-outline-dark">Add to Order</button> -->
       </div>
     </div>
     <div class="col-4 mt-5">
@@ -30,4 +30,43 @@
       </p>
     </div>
   </div>
+  <!-- <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="btn-close me-2"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body row">
+          <img class="item-img mb-2" [src]="item.image" />
+          <div class="row h-25 fs-3 mb-2">
+            <p class="item-name row h-25 mb-2">{{ item.title }}</p>
+          </div>
+          <div class="row h-50 fs-4 mb-1">
+            <p class="item-description">
+              {{ item.description }}
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="row mx-auto g-1">
+            <p class="col-5 item-price fs-3">${{ item.price }}</p>
+            <button type="button" class="btn btn-outline-dark col-5 py-2 px-4">
+              Add To Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
 </div>

@@ -1,4 +1,4 @@
-export interface IUser {
+export interface ICustomer {
   _id: string;
   firstName: string;
   lastName: string;
@@ -8,7 +8,7 @@ export interface IUser {
   cart: string;
 }
 
-export class User implements IUser {
+export class Customer implements ICustomer {
   constructor(
     public _id: string,
     public firstName: string,

@@ -1,4 +1,5 @@
 export interface IMenuItem {
+  _id: string;
   title: string;
   description: string;
   image: string;
@@ -9,6 +10,7 @@ export interface IMenuItem {
 
 export class MenuItem implements IMenuItem {
   constructor(
+    public _id: string,
     public title: string,
     public description: string,
     public image: string,
